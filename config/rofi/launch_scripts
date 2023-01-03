@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 scripts_path="${HOME}/.local/scripts"
 
 if [[ -d "$scripts_path" ]]
