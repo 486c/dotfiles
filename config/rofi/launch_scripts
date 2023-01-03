@@ -1,0 +1,10 @@
+#!/bin/sh
+scripts_path="${HOME}/.local/scripts"
+
+if [[ -d "$scripts_path" ]]
+then
+	choice=$(ls "$scripts_path" | rofi -dmenu -l 5)
+	"${scripts_path}/${choice}" | ${SHELL:-"/bin/sh"} &
+else
+	rofi -e "Scripts directory doesn't exists!"
+fi
