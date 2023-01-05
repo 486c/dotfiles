@@ -2,7 +2,6 @@ gaps outer 0
 gaps inner 7
 
 #<colorclass> <border> <background> <text> <indicator> <child_border>
-#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
 client.focused          #4c7899 #ff66ff #ffffff #ff9999 #ff66ff 
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #4d004d #888888 #ff9999 #4d004d
