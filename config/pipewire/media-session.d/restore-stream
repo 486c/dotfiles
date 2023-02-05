@@ -1,0 +1,17 @@
+{
+ "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:ArrowVortex.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:ArrowVortex.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Audio/Sink.node.name:alsa_output.pci-0000_00_1f.3.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Audio/Source.node.name:alsa_input.pci-0000_00_1f.3.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:osu!.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:osu!.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.media.role:Game": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:Chromium": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:dota2": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.application.name:PulseAudio Volume Control": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Input/Audio.application.name:steam": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+ "restore.stream.Output/Audio.application.name:csgo_linux64": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Input/Audio.media.role:Game": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] }
+}
