@@ -25,9 +25,12 @@ packer.startup(function()
   use {'dracula/vim', as = 'dracula'}
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
+  use "williamboman/mason.nvim"
   use 'itchyny/calendar.vim'
   end
 )
+
+require("mason").setup()
 
 local o = vim.o
 local g = vim.g
@@ -38,6 +41,7 @@ o.tabstop = 4
 o.shiftwidth = 4
 g.noswapfile = true
 g.rainbow_active = 1
+o.formatoptions = o.formatoptions .. 'cro'
 
 vim.opt.clipboard = 'unnamedplus'
 
