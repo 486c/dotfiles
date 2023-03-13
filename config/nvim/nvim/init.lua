@@ -41,6 +41,13 @@ o.tabstop = 4
 o.shiftwidth = 4
 g.noswapfile = true
 g.rainbow_active = 1
+
+vim.api.nvim_create_autocmd(
+	"BufEnter", 
+	{ 
+		callback = function() vim.opt.formatoptions = vim.opt.formatoptions - { "c","r","o" } end, 
+	}
+)
 o.formatoptions = o.formatoptions .. 'cro'
 
 vim.opt.clipboard = 'unnamedplus'
