@@ -35,6 +35,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu rofi -show run -theme cute
+set $screenshot sh ~/.config/sway/screenshot.sh
 
 ### Output configuration
 #
@@ -72,6 +73,9 @@ input "type:keyboard" {
 #
 # Example configuration:
 #
+input "1386:768:Wacom_Bamboo_One_S_Pen" {
+	left_handed enabled
+}
 #   input "2:14:SynPS/2_Synaptics_TouchPad" {
 #       dwt enabled
 #       tap enabled
@@ -94,6 +98,9 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+	# Make screenshot and copy it to clipboard
+	bindsym $mod+Shift+s exec $screenshot
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -237,6 +244,9 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+exec pipewire -c ~/.config/pipewire/pipewire.conf &
+exec pipewire-pulse -c ~/.config/pipewire/pipewire-pulse.conf &
 
 gaps outer 0
 gaps inner 7
