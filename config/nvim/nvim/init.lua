@@ -34,6 +34,7 @@ require("mason").setup()
 
 local o = vim.o
 local g = vim.g
+local opt = vim.opt
 
 g.mapleader = " "
 o.number = true
@@ -41,6 +42,7 @@ o.tabstop = 4
 o.shiftwidth = 4
 g.noswapfile = true
 g.rainbow_active = 1
+opt.colorcolumn = "75"
 
 vim.api.nvim_create_autocmd(
 	"BufEnter", 
@@ -67,11 +69,15 @@ keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').find_files()<cr
 keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>c", "<cmd>Telescope buffers<cr>", opts)
 
+-- Remaps
 local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Left>", "<Nop>", {silent = true })
 keymap("n", "<Right>", "<Nop>", {silent = true })
 keymap("n", "<Up>", "<Nop>", {silent = true })
 keymap("n", "<Down>", "<Nop>", {silent = true })
+keymap("n", "<C-d>", "<C-d>zz", {silent = true})
+keymap("n", "<C-u>", "<C-u>zz", {silent = true})
+keymap("x", "<leader>p", "\"_dP", {silent = true})
 
 local on_attach = function(client, bufnr)
 	
