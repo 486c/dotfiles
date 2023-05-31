@@ -14,7 +14,7 @@ mkdir ./config/nvim
 cp ~/run-sway .
 cp ~/.xinitrc .
 
-cp -r ${HOME}/.config/nvim ./config/nvim
+cp -r ${HOME}/.config/nvim/* ./config/nvim/
 cp -r ${HOME}/.config/rofi ./config/
 
 cp -r ${HOME}/.config/pipewire ./config/
