@@ -1,5 +1,40 @@
+local vim = vim
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+-- ensure that packer is installed
+local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+    execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+    execute 'packadd packer.nvim'
+end
+
+vim.cmd('packadd packer.nvim')
+
+local packer = require'packer'
+local util = require'packer.util'
+
+packer.init({
+  package_root = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack')
+})
+
+packer.startup(function()
+  local use = use
+  use 'wbthomason/packer.nvim'
+  use 'neovim/nvim-lspconfig' 
+  use {'dracula/vim', as = 'dracula'}
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use "williamboman/mason.nvim"
+  use 'itchyny/calendar.vim'
+  end
+)
+
+require("mason").setup()
+
 local o = vim.o
 local g = vim.g
+local opt = vim.opt
 
 g.mapleader = " "
 o.number = true
@@ -7,6 +42,15 @@ o.tabstop = 4
 o.shiftwidth = 4
 g.noswapfile = true
 g.rainbow_active = 1
+opt.colorcolumn = "75"
+
+vim.api.nvim_create_autocmd(
+	"BufEnter", 
+	{ 
+		callback = function() vim.opt.formatoptions = vim.opt.formatoptions - { "c","r","o" } end, 
+	}
+)
+o.formatoptions = o.formatoptions .. 'cro'
 
 vim.opt.clipboard = 'unnamedplus'
 
@@ -25,11 +69,15 @@ keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').find_files()<cr
 keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>c", "<cmd>Telescope buffers<cr>", opts)
 
+-- Remaps
 local keymap = vim.api.nvim_set_keymap
 keymap("n", "<Left>", "<Nop>", {silent = true })
 keymap("n", "<Right>", "<Nop>", {silent = true })
 keymap("n", "<Up>", "<Nop>", {silent = true })
 keymap("n", "<Down>", "<Nop>", {silent = true })
+keymap("n", "<C-d>", "<C-d>zz", {silent = true})
+keymap("n", "<C-u>", "<C-u>zz", {silent = true})
+keymap("x", "<leader>p", "\"_dP", {silent = true})
 
 local on_attach = function(client, bufnr)
 	
@@ -67,12 +115,5 @@ require('lspconfig')['rust_analyzer'].setup{
 local ok, _ = pcall(vim.cmd, 'colorscheme dracula')
 
 return require('packer').startup(function()
-
-	use 'wbthomason/packer.nvim'
-	use 'neovim/nvim-lspconfig' 
-	use {'dracula/vim', as = 'dracula'}
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-telescope/telescope.nvim'
-	use 'itchyny/calendar.vim'
-
 end)
+
