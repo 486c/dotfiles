@@ -246,6 +246,7 @@ bar {
 }
 
 exec pipewire -c ~/.config/pipewire/pipewire.conf &
+exec wireplumber -c ~/.config/wireplumber/wireplumber.conf &
 exec pipewire-pulse -c ~/.config/pipewire/pipewire-pulse.conf &
 
 gaps outer 0
