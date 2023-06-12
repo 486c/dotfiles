@@ -27,6 +27,7 @@ packer.startup(function()
   use 'nvim-telescope/telescope.nvim'
   use "williamboman/mason.nvim"
   use 'itchyny/calendar.vim'
+  use 'christoomey/vim-tmux-navigator'
   end
 )
 
