@@ -13,6 +13,7 @@ mkdir ./config/nvim
 
 cp ~/run-sway .
 cp ~/.xinitrc .
+cp ~/.tmux.conf .
 
 cp -r ${HOME}/.config/nvim/* ./config/nvim/
 cp -r ${HOME}/.config/rofi ./config/
