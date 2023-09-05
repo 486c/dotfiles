@@ -2,6 +2,11 @@ local vim = vim
 local execute = vim.api.nvim_command
 local fn = vim.fn
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.lsp.set_log_level("trace")
+
 -- ensure that packer is installed
 local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -28,8 +33,24 @@ packer.startup(function()
   use "williamboman/mason.nvim"
   use 'itchyny/calendar.vim'
   use 'christoomey/vim-tmux-navigator'
+  use 'DanielWeidinger/nvim-sshfs'
+  use 'nvim-tree/nvim-tree.lua'
   end
 )
+
+-- NVIM-TREE
+require("nvim-tree").setup({
+	renderer = {
+		icons = {
+			show = {
+				file = false,
+				folder = false,
+				folder_arrow = false,
+				git = false,
+			}
+		}
+	},
+})
 
 require("mason").setup()
 
@@ -57,9 +78,9 @@ vim.opt.clipboard = 'unnamedplus'
 
 require "telescope".setup { pickers = { buffers = { initial_mode = "normal" } } }
 
-require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 require('lspconfig')['rust_analyzer'].setup{}
+require'lspconfig'.pyright.setup{}
 
 vim.lsp.set_log_level("debug")
 
@@ -108,6 +129,16 @@ require('lspconfig')['clangd'].setup{
 }
 
 require('lspconfig')['rust_analyzer'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
+require('lspconfig')['tsserver'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
+require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
