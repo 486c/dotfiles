@@ -28,6 +28,7 @@ packer.startup(function()
   use "williamboman/mason.nvim"
   use 'itchyny/calendar.vim'
   use 'christoomey/vim-tmux-navigator'
+  use 'nvim-tree/nvim-tree.lua'
   end
 )
 
@@ -44,6 +45,24 @@ o.shiftwidth = 4
 g.noswapfile = true
 g.rainbow_active = 1
 opt.colorcolumn = "75"
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+opt.termguicolors = true
+
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  renderer = {
+	icons = {
+	   show = {
+		file = false,
+		folder = false,
+		folder_arrow = false,
+		git = false,
+	   }
+	},
+    group_empty = true,
+  },
+})
 
 vim.api.nvim_create_autocmd(
 	"BufEnter", 
