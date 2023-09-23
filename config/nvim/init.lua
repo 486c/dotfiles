@@ -29,10 +29,12 @@ packer.startup(function()
   use 'itchyny/calendar.vim'
   use 'christoomey/vim-tmux-navigator'
   use 'nvim-tree/nvim-tree.lua'
+  use 'RaafatTurki/hex.nvim'
   end
 )
 
 require("mason").setup()
+require 'hex'.setup()
 
 local o = vim.o
 local g = vim.g
