@@ -160,6 +160,10 @@ exec pipewire -c ~/.config/pipewire/pipewire.conf &
 exec wireplumber -c ~/.config/wireplumber/wireplumber.conf &
 exec pipewire-pulse -c ~/.config/pipewire/pipewire-pulse.conf &
 
+#exec pipewire
+#exec wireplumber
+#exec pipewire-pulse
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always flameshot &
 exec_always lxpolkit &

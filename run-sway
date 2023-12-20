@@ -16,4 +16,7 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway 
 export XDG_CURRENT_SESSION_TYPE=wayland
 
-dbus-run-session sway --unsupported-gpu
+export PIPEWIRE_RUNTIME_DIR=~/.config/pipewire
+export PULSE_RUNTIME_PATH=~/.config/pulse
+
+exec sway --unsupported-gpu

@@ -42,7 +42,10 @@ set $screenshot sh ~/.config/sway/screenshot.sh
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
-output HDMI-A-1 resolution 1920x1080@143.981HZ position 0,0
+#output HDMI-A-1 resolution 1920x1080@143.981HZ position 0,0
+
+#output DP-1 resolution 1366x768@59.790Hz
+output DP-1 resolution 2560x1440@164.998Hz
 
 input "type:keyboard" {
     xkb_layout "us,ru"
