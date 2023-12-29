@@ -1,3 +1,6 @@
+env:
+  TERM: xterm-256color
+
 font:
   normal:
     #family: Scientifica
@@ -7,10 +10,10 @@ font:
     style: Regular
       #bold:
     #family: Monocraft
-    family: ProTamsyn2x
+    #family: ProTamsyn2x
     #family: monospace
     #style: Medium
-    #family: JetBrains Mono
+    family: JetBrains Mono
   size: 16
 
 colors:
