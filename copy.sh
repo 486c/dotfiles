@@ -21,3 +21,6 @@ cp -r ${HOME}/.config/polybar ./config/
 cp -r ${HOME}/.config/alacritty ./config/
 
 cp -r ${HOME}/.local/scripts ./local/
+
+rm -rf ./config/nvim/shada
+rm -rf ./config/nvim/plugin
