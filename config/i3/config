@@ -166,4 +166,4 @@ exec pipewire-pulse -c ~/.config/pipewire/pipewire-pulse.conf &
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always flameshot &
-exec_always lxpolkit &
+#exec_always lxpolkit &
