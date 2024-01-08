@@ -14,7 +14,7 @@ font:
     #family: monospace
     #style: Medium
     family: JetBrains Mono
-  size: 16
+  size: 10
 
 colors:
   primary:
