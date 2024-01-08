@@ -42,3 +42,4 @@ keymap("x", "<leader>p", "\"_dP", {silent = true})
 
 keymap("n", "<leader>gx", "<cmd>HexToggle<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>LazyGit<cr>", opts)
+keymap("n", "<leader>d", "<cmd>NvimTreeToggle<cr>", opts)

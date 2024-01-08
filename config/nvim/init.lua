@@ -30,6 +30,7 @@ require('packer').startup(function(use)
 	use 'RaafatTurki/hex.nvim'
 
 	use 'kdheepak/lazygit.nvim'
+	use 'nvim-treesitter/nvim-treesitter'
 	
 	-- Theme
 	use {'dracula/vim', as = 'dracula'}
