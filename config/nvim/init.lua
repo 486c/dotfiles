@@ -29,8 +29,16 @@ require('packer').startup(function(use)
 	use 'nvim-tree/nvim-tree.lua'
 	use 'RaafatTurki/hex.nvim'
 
+	use 'tpope/vim-dadbod'
+	use 'kristijanhusak/vim-dadbod-ui'
+
 	use 'kdheepak/lazygit.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+
+	use 'wakatime/vim-wakatime'
+
+	use 'ldelossa/litee.nvim'
+	use 'ldelossa/litee-calltree.nvim'
 	
 	-- Theme
 	use {'dracula/vim', as = 'dracula'}
@@ -54,3 +62,8 @@ end
 
 require('theme')
 require('plugins')
+
+-- TODO temp
+require('litee.lib').setup({})
+-- configure litee-calltree.nvim
+require('litee.calltree').setup({})

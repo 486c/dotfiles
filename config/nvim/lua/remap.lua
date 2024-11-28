@@ -11,6 +11,7 @@ o.number = true
 o.tabstop = 4
 o.shiftwidth = 4
 g.noswapfile = true
+o.swapfile = false
 g.rainbow_active = 1
 opt.colorcolumn = "75"
 g.loaded_netrw = 1
