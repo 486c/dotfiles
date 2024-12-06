@@ -16,6 +16,7 @@ cp -r ${HOME}/.config/rofi ./config/
 
 cp -r ${HOME}/.config/pipewire ./config/
 cp -r ${HOME}/.config/i3 ./config/
+cp -r ${HOME}/.config/fish ./config/
 cp -r ${HOME}/.config/sway ./config/
 cp -r ${HOME}/.config/polybar ./config/
 cp -r ${HOME}/.config/alacritty ./config/
