@@ -20,6 +20,7 @@ cp -r ${HOME}/.config/fish ./config/
 cp -r ${HOME}/.config/sway ./config/
 cp -r ${HOME}/.config/polybar ./config/
 cp -r ${HOME}/.config/alacritty ./config/
+cp -r ${HOME}/.config/ghostty ./config/
 
 cp -r ${HOME}/.local/scripts ./local/
 
