@@ -44,3 +44,14 @@ keymap("x", "<leader>p", "\"_dP", {silent = true})
 keymap("n", "<leader>gx", "<cmd>HexToggle<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>LazyGit<cr>", opts)
 keymap("n", "<leader>d", "<cmd>NvimTreeToggle<cr>", opts)
+
+
+-- Terminal setup
+
+vim.api.nvim_create_autocmd('TermOpen', {
+	group = vim.api.nvim_create_augroup('term-open', { clear = true }),
+	callback = function()
+		vim.opt.number = false
+		vim.opt.relativenumber = false
+	end,
+})
