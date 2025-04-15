@@ -28,6 +28,7 @@ require('packer').startup(function(use)
 	use 'christoomey/vim-tmux-navigator'
 	use 'nvim-tree/nvim-tree.lua'
 	use 'RaafatTurki/hex.nvim'
+	use 'fresh2dev/zellij.vim'
 
 	use 'tpope/vim-dadbod'
 	use 'kristijanhusak/vim-dadbod-ui'
@@ -39,6 +40,7 @@ require('packer').startup(function(use)
 
 	use 'ldelossa/litee.nvim'
 	use 'ldelossa/litee-calltree.nvim'
+	use 'lewis6991/gitsigns.nvim'
 	
 	-- Theme
 	use {'dracula/vim', as = 'dracula'}
@@ -67,3 +69,5 @@ require('plugins')
 require('litee.lib').setup({})
 -- configure litee-calltree.nvim
 require('litee.calltree').setup({})
+
+require('gitsigns').setup({})

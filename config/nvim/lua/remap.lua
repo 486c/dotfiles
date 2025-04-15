@@ -32,6 +32,7 @@ vim.api.nvim_create_autocmd(
 keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
 keymap("n", "<leader>gg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>c", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>i", "<cmd>Telescope diagnostics<cr>", opts)
 
 keymap("n", "<Left>", "<Nop>", {silent = true })
 keymap("n", "<Right>", "<Nop>", {silent = true })
@@ -43,11 +44,11 @@ keymap("x", "<leader>p", "\"_dP", {silent = true})
 
 keymap("n", "<leader>gx", "<cmd>HexToggle<cr>", opts)
 keymap("n", "<leader>lg", "<cmd>LazyGit<cr>", opts)
+keymap("n", "<leader>lb", "<cmd>Gitsigns blame_line<cr>", opts)
 keymap("n", "<leader>d", "<cmd>NvimTreeToggle<cr>", opts)
 
 
 -- Terminal setup
-
 vim.api.nvim_create_autocmd('TermOpen', {
 	group = vim.api.nvim_create_augroup('term-open', { clear = true }),
 	callback = function()
@@ -55,3 +56,5 @@ vim.api.nvim_create_autocmd('TermOpen', {
 		vim.opt.relativenumber = false
 	end,
 })
+
+keymap('t', '<Esc>', '<C-\\><C-n>', {noremap = true})
